@@ -19,20 +19,20 @@ El servicio es consumido usando la libreria Retrofit
 
 Estas librerias son fundamentales para el buen funcionamiento de la app.
 
-```
+```groovy
     implementation "com.squareup.retrofit2:retrofit:2.8.1"
     implementation "com.squareup.retrofit2:converter-gson:2.8.1"
     implementation 'com.google.code.gson:gson:2.8.6'
 ```
 
-```
+```groovy
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 i   mplementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.3'
 ```
 
 _Tambien se hace uso de ViewBinding, esto para realizar la vinculación de vistas mucho mas facil, todo esto se realiza en tu archivo **build.gradle**_
 
-```
+```groovy
     buildFeatures{
         viewBinding = true
     }
@@ -50,7 +50,7 @@ _Esto te ayudara a mantener todo mas ordenado y tu mantenimiento sera mas fácil
 
 _Tus nuevas vistas deben tener esta estructura:_
 
-```
+```kotlin
     class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate), MainContract.View
 ```
 
@@ -58,7 +58,7 @@ _Donde le indicas al **BaseActivity** tu **ActivityBinding** y el View perteneci
 
 ## Estructura del Presenter
 
-```
+```kotlin
 
     class MainPresenter(private val view: MainContract.View, private val API: MainContract.API): MainContract.Presenter, BasePresenter<MainContract.View>(view) {
         override fun getArticles() {
@@ -76,7 +76,7 @@ _Donde le indicas al **BaseActivity** tu **ActivityBinding** y el View perteneci
 
 ## Estructura del Contract
 
-```
+```kotlin
 
     interface MainContract {
         interface View: BaseView {
@@ -97,7 +97,7 @@ _Donde le indicas al **BaseActivity** tu **ActivityBinding** y el View perteneci
 
 ## Estructura del Model
 
-```
+```kotlin
 
     object MainAPI: MainContract.API {
         override fun getArticles(onSuccess: (List<Article>) -> Unit, onError: (String) -> Unit){
@@ -134,7 +134,7 @@ _para proyectos en producción._
 
 _**Linea de código a reemplazar:**_
 
-```
+```kotlin
 
     for(article in articles) {
         var isExist : Boolean = false
