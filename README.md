@@ -27,7 +27,7 @@ Estas librerias son fundamentales para el buen funcionamiento de la app.
 
 ```groovy
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-i   mplementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.3'
+    implementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.3'
 ```
 
 _Tambien se hace uso de ViewBinding, esto para realizar la vinculación de vistas mucho mas facil, todo esto se realiza en tu archivo **build.gradle**_
