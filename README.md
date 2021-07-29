@@ -1,5 +1,5 @@
 # MVP-Kotlin-Android
-Android Developer at Reign test - MVP
+Android Developer test - MVP
 
 ## Comenzando 🚀
 
