@@ -3,7 +3,8 @@ Android Developer at Reign test - MVP
 
 ## Comenzando 🚀
 
-_Dentro del proyecto se puede apreciar una estructúra de código MVP hecho en Kotlin, la app consume un servicio de pruebas de Hacker News:_
+_Dentro del proyecto se puede apreciar una estructúra de código MVP hecho en Kotlin, tambien si usas la app sin conexión la misma mostrara la data antes cargada
+, la app consume un servicio de pruebas de Hacker News:_
 
 ```
 https://hn.algolia.com/api/v1/search_by_date?query=mobile
@@ -29,7 +30,7 @@ Estas librerias son fundamentales para el buen funcionamiento de la app.
 i   mplementation 'com.github.xabaras:RecyclerViewSwipeDecorator:1.3'
 ```
 
-_Tambien se hace uso de ViewBinding, esto para realizar la vinculación de vistas mucho mas facil, todo esto se realiza en tu archivo build.gradle_
+_Tambien se hace uso de ViewBinding, esto para realizar la vinculación de vistas mucho mas facil, todo esto se realiza en tu archivo **build.gradle**_
 
 ```
     buildFeatures{
@@ -42,7 +43,8 @@ _Tambien se hace uso de ViewBinding, esto para realizar la vinculación de vista
 _Este proceso es realmente sencillo, dentro del proyecto existen carpetas que dividen la estructúra del mismo, dentro de la carpeta **UI**
 puedes encontrar toda la lógica del MVP aplicada a las vistas._
 
-_Puedes poner los archivos como mejor te parezca pero te recomiendo que si haces una vista nueva por ejemplo **PRODUCTOS**, crea una carpeta dentro de **UI** con el nombre de la misma._
+_Puedes poner los archivos como mejor te parezca pero te recomiendo que si haces una vista nueva por ejemplo **PRODUCTOS**, crea una carpeta dentro de **UI** con el nombre de la misma y
+alli crees tus archivos **ProductsActivity**, **ProductsAPI**(Modelo: Encargado de las solicitudes al server), **ProductsContract** y **ProductsPresenter**._
 
 _Esto te ayudara a mantener todo mas ordenado y tu mantenimiento sera mas fácil._
 
@@ -122,6 +124,39 @@ _Donde le indicas al **BaseActivity** tu **ActivityBinding** y el View perteneci
     }
 
 ```
+
+## NOTA IMPORTANTE 📋
+
+_Este proyecto es netamente informativo para mostrar como poder aplicar el patrón MVP y consúmo de una API._
+
+_Al mismo tiempo lo mas combeniente durante el proceso de **eliminar articulos** es realizar el mismo por medio de un servicio web, en este proyecto se realiza de una forma no recomendada_
+_para proyectos en producción._
+
+_**Linea de código a reemplazar:**_
+
+```
+
+    for(article in articles) {
+        var isExist : Boolean = false
+
+        for(delete in articleDelete) {
+            if(delete.story_id == article.story_id) {
+                isExist = true
+                break
+            }
+        }
+
+        if(!isExist) {
+            articleList.add(article)
+        }
+    }
+
+```
+
+## Construido con 🛠️
+
+* [Android Studio 4.1.1](https://developer.android.com/studio?hl=es-419&gclid=CjwKCAjwo4mIBhBsEiwAKgzXOP0yGex5DlHpGEUbmPXIkzUvkVhrrIOHJyKu-wBigcDayA55WjMVzxoCNLkQAvD_BwE&gclsrc=aw.ds) - Entorno de desarrollo integrado oficial para la plataforma Android.
+* [Maven](https://maven.apache.org/) - Manejador de dependencias
 
 
 
