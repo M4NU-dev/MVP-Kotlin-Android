@@ -129,7 +129,7 @@ _Donde le indicas al **BaseActivity** tu **ActivityBinding** y el View perteneci
 
 _Este proyecto es netamente informativo para mostrar como poder aplicar el patrón MVP y consúmo de una API._
 
-_Al mismo tiempo lo mas combeniente durante el proceso de **eliminar articulos** es realizar el mismo por medio de un servicio web, en este proyecto se realiza de una forma no recomendada_
+_Al mismo tiempo lo mas conveniente durante el proceso de **eliminar articulos** es realizar el mismo por medio de un servicio web, en este proyecto se realiza de una forma no recomendada_
 _para proyectos en producción._
 
 _**Linea de código a reemplazar:**_
@@ -157,6 +157,3 @@ _**Linea de código a reemplazar:**_
 
 * [Android Studio 4.1.1](https://developer.android.com/studio?hl=es-419&gclid=CjwKCAjwo4mIBhBsEiwAKgzXOP0yGex5DlHpGEUbmPXIkzUvkVhrrIOHJyKu-wBigcDayA55WjMVzxoCNLkQAvD_BwE&gclsrc=aw.ds) - Entorno de desarrollo integrado oficial para la plataforma Android.
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
-
-
-

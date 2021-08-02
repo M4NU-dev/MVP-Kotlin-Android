@@ -160,7 +160,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
         setDataView(tempData)
     }
-    // VENTO CLICK DEL ADAPTER
+    // EVENTO CLICK DEL ADAPTER
     override fun onItemClick(article: Article) {
         if(article != null) {
             val gson = Gson()
